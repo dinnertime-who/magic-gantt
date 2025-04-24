@@ -31,7 +31,8 @@
                 font-size: 0.775em;
             }
         </style>
-        <script src="dist/frappe-gantt.umd.js"></script>
+        <!-- <script src="dist/frappe-gantt.umd.js"></script> -->
+        <!-- <script src="./src/index.js" type="module"></script> -->
     </head>
     <body>
         <div class="container">
@@ -316,6 +317,7 @@
             </div>
         </div>
         <script type="module">
+            import Gantt from './src/index.js';
             const rawToday = new Date();
             const today =
                 Date.UTC(
@@ -339,8 +341,8 @@
                     start: daysSince(-2),
                     end: daysSince(2),
                     name: 'Redesign website',
-                    id: 'Task 0',
                     progress: random(),
+                    group_index: 0,
                 },
                 {
                     start: daysSince(3),
@@ -349,7 +351,7 @@
                     id: 'Task 1',
                     progress: random(),
                     important: true,
-                    dependencies: 'Task 0',
+                    group_index: 1,
                 },
                 {
                     start: daysSince(4),
@@ -357,6 +359,7 @@
                     name: 'Apply new styles',
                     id: 'Task 2',
                     progress: random(),
+                    group_index: 0,
                 },
                 {
                     start: daysSince(-4),
@@ -364,6 +367,7 @@
                     name: 'Review',
                     id: 'Task 3',
                     progress: random(),
+                    group_index: 1,
                 },
             ];
 
@@ -531,7 +535,8 @@
                 { name: 'Christmas', date: '2024-12-25' },
             ];
 
-            const mutablity = new Gantt('#mutability', tasks);
+            const mutablity = new Gantt('#mutability', tasks, {});
+
             const sideheader = new Gantt('#sideheader', tasksSpread, {
                 today_button: true,
                 view_mode_select: true,
