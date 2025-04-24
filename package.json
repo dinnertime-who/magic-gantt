@@ -16,6 +16,9 @@
         "type": "git",
         "url": "git+https://github.com/dinnertime-who/magic-gantt.git"
     },
+    "publishConfig": {
+        "@dinnertime-who:registry": "https://npm.pkg.github.com/"
+    },
     "files": [
         "src",
         "dist",
