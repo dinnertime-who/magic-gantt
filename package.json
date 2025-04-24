@@ -1,5 +1,5 @@
 {
-    "name": "@dinnertime-who/frappe-gantt",
+    "name": "@dinnertime-who/magic-gantt",
     "version": "0.0.1",
     "description": "A simple, modern, interactive gantt library for the web",
     "main": "src/index.js",
@@ -26,9 +26,9 @@
     ],
     "exports": {
         ".": {
-            "require": "./dist/frappe-gantt.umd.js",
-            "import": "./dist/frappe-gantt.es.js",
-            "style": "./dist/frappe-gantt.css"
+            "require": "./dist/magic-gantt.umd.js",
+            "import": "./dist/magic-gantt.es.js",
+            "style": "./dist/magic-gantt.css"
         }
     },
     "keywords": [
