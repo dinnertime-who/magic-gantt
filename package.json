@@ -1,5 +1,5 @@
 {
-    "name": "magic-gantt",
+    "name": "@dinnertime-who/magic-gantt",
     "version": "0.0.1",
     "description": "A simple, modern, interactive gantt library for the web",
     "main": "src/index.js",
@@ -15,6 +15,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dinnertime-who/magic-gantt.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
     },
     "files": [
         "src",
@@ -36,12 +39,7 @@
         "interactive gantt",
         "project management"
     ],
-    "author": "Faris Ansari",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/dinnertime-who/magic-gantt/issues"
-    },
-    "homepage": "https://github.com/dinnertime-who/magic-gantt",
     "devDependencies": {
         "eslint": "^9.15.0",
         "eslint-config-prettier": "^2.9.0",
